@@ -1,0 +1,32 @@
+// 2020-05-06 Onute Fastest Edition
+
+How to make a bonziworld server
+First one, you will need to install grunt.js and Node.JS in your computer.
+
+Open the command prompt as administrator.
+Follow the instructions (heyjoeway instructions are here):
+
+Client
+
+cd src
+npm install
+grunt build_www
+cd ..
+
+Server
+
+cd server
+npm install
+node index.js
+
+After this, BonziWORLD will be accessible on port 3000. (http://localhost:3000/)
+You can change any port you want (FIRST EDIT THE script.min.js and settings.json for changing the port)
+
+Second one. You need a port forwarding to access anyone on the server.
+Type your private IP 192.168.0.1
+If you have D-Link or TP-Link for fast connection.
+Click their menus port forwarding, type the same port and add to your port.
+Share the IP address and what are you looking for!
+
+Disclaimer
+I'm not responsible if you screw up anything with your computer while setting this up. I have no idea how you would, but someone will find a way. I also will not provide support for installing dependencies. If you have everything installed properly, the above commands will work.

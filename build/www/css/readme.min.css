@@ -1,0 +1,61 @@
+body, html {
+  margin: auto;
+  padding: 10px;
+  font-size: 22px;
+}
+
+body, body * {
+  font-family: "SST Vietnamese Condensed", "Tahoma", Arial, Verdana, Helvetica, Roboto, "Droid Sans", sans-serif;
+}
+
+a { color: lime; text-decoration: none; text-shadow: 2px 2px 3px black; }
+
+input[type=text] {
+  background-color: #fff;
+  border: 1px inset #AAA;
+  color: #000;
+}
+
+.xp_bubble, #content {
+  background: #ffffe1;
+  color: #000;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  border: #000000 solid 1px;
+}
+
+@font-face {
+  font-family: "Tahoma";
+  src: url("../font/Tahoma/Tahoma.eot?#iefix") format("embedded-opentype"), url("../font/Tahoma/Tahoma.woff") format("woff"), url("../font/Tahoma/Tahoma.ttf") format("truetype"), url("../font/Tahoma/Tahoma.svg#Tahoma") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  overflow: auto;
+}
+
+body {
+  background-color: black;
+  background-image: url("../img/readme/bg.gif");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+#content {
+  width: 75%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 4px 32px;
+  background-color: rgba(255, 255, 225, 0.8);
+}
+
+#bonziworld {
+  display: block;
+}
+
+#titlebar {
+  background-color: rgba(109, 51, 160, 0.85);
+}
+
+/*# sourceMappingURL=readme.min.css.map */

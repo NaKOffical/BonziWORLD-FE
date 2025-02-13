@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>CharMap</title>
+    <link href="../css/ui-light.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/app.css" type="text/css" />
+    <script src="../js/lib/WinJS.js"></script>
+    <script src="../js/charmap.js"></script>
+    <script src="../js/data/hardcoded_data.js"></script>
+    <script src="index.js"></script>
+</head>
+<body id="root">
+
+    <div id="app">
+
+        <div data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+                     title: 'Character',
+                     primaryCommandText: 'Close'
+                }">
+            <h1 class="heading">There will be a Char here!</h1>
+            <div class="body">There will be a Char here!</div>
+        </div>
+
+        <div class="splitView" data-win-control="WinJS.UI.SplitView">
+            <!-- SplitView Navigation Pane Area -->
+            <div>
+                <div class="header">
+                    <button type="button" class="win-splitview-button" onclick="CharMap.togglePane();"></button>
+                    <div class="title">CharMap</div>
+                </div>
+
+                <div class="nav-commands">
+                    <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{ onclick: CharMap.homeClicked, label: 'Home', icon: 'home' }"></div>
+                    <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{ onclick: WinJSApp.favoriteClicked, label: 'List', icon: 'list' }"></div>
+                </div>
+            </div>
+            <!-- SplitView Content Area -->
+            <div class="contenttext">
+                <div id="header">
+                <h1 id="title">CharMap (loading...)</h1>
+
+                <input type="range" min="0" max="20" id="blockSlider" value="0" style="width:400px" />
+                </div>
+                <div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+                    <div class="container">
+                        <div class="letter" data-win-bind="innerHTML:preview"></div>
+                        <div data-win-bind="innerHTML:text"></div>
+                    </div>
+                </div>
+                <div id="content"
+                    class="content" 
+                    data-win-control="WinJS.UI.ListView"
+                    data-win-options="{
+                        itemTemplate: select('.smallListIconTextTemplate'),
+                        selectionMode: 'none',
+                        layout: { type: WinJS.UI.GridLayout }
+                    }"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

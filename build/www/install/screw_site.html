@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fun with jQuery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta charset="UTF-8">
+<meta name="theme-color" content="grey">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<style>
+body { font-family: "SST Vietnamese Regular", "Arial Black", "Segoe UI", Verdana, Helvetica, Arial, Roboto, Clockopia, sans-serif; }
+a { color: lime; text-decoration: none; font-weight: bolder; font-size: 20px; text-shadow: 2/px 2px 3px black; }
+</style>
+<body>
+<div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div>
+<div></div>
+<div></div><div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div>
+<p>Click this button to test generation.</p>
+<div></div>
+<p><button onclick="generateThis()">Test</button></p>
+<div></div>
+</body>
+<script>function generateThis(){ setInterval(function(){$('div').append(String.fromCharCode(0x10FFFF + Math.random() * (0x0000-0x10FFFF+1)))}, 1000); }</script>
+</html>

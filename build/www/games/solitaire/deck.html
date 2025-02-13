@@ -1,0 +1,85 @@
+<link rel="import" href="card.html">
+
+<template id="septatrix-deck-template">
+  <style>
+  :host {
+    display: inline-flex;
+    flex-direction: column;
+    /* align-items: center;
+    align-content: center;
+    width: calc(240px *.5);
+    height: 100%;
+    margin: auto; */
+    --offset-bottom: 13px;
+    /*--offset-right: 1px;*/
+    /*border: 1px solid red;*/
+  }
+  ::slotted(septatrix-card) {
+    margin-bottom: calc(calc(336px * var(--scale, 1)) * -1 + var(--offset-bottom, 0px));
+    /*margin-right: calc(calc(240px *.5) * -1 + var(--offset-right, 0px));*/
+    /*flex-basis: auto;*/
+  }
+  .deckBackground {
+    position: absolute;
+  }
+  </style>
+  <slot></slot>
+</template>
+
+<script>
+  {
+    'use strict';
+    const thisDoc = document.currentScript.ownerDocument;
+    class Deck extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({mode: 'open'}).appendChild(thisDoc.getElementById('septatrix-deck-template').content.cloneNode('true'));
+        this.options = {};
+        this.observer = new MutationObserver(
+          (mutations, observer) => {
+            for (let mutation of mutations) {
+              if (mutation.addedNodes.length > 0) {
+                let details = {cards: this.children.length, card: mutation.addedNodes[0]};
+                let event = new CustomEvent('cardAdded', {detail: details});
+                this.dispatchEvent(event);
+              }
+              if (mutation.removedNodes.length > 0) {
+                let details = {cards: this.children.length, card: mutation.removedNodes[0]};
+                let event = new CustomEvent('cardRemoved', {detail: details});
+                this.dispatchEvent(event);
+              }
+            }
+          }
+        );
+        this.observer.observe(this, {childList: true})
+      }
+
+      addBackground(node) {
+        if(this.shadowRoot.querySelectorAll('deckBackground').length > 0) return;
+        node.classList.add('deckBackground');
+        this.shadowRoot.insertBefore(node, this.shadowRoot.firstElementChild);
+      }
+
+      removeBackground() {
+        let node = this.shadowRoot.querySelectorAll('deckBackground')[0];
+        node.classList.remove('deckBackground');
+        return this.shadowRoot.removeChild(node);
+      }
+
+      configureOptions(options) {Object.assign(this.options, options);}
+
+      addCard(elem) {
+        if(!this.options.filter || this.options.filter(elem, this)) {
+          this.appendChild(elem);
+        }
+      }
+
+      isEmpty() {return this.children.length === 0;}
+
+      get cards() {return this.children;}
+      get topCard() {return this.children[this.children.length-1];}
+      get bottomCard() {return this.children[0];}
+    }
+    customElements.define('septatrix-deck', Deck);
+  }
+</script>

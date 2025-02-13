@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BonziWORLD FE | Demo Help</title>
+
+	<meta content="">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/favicons/manifest.json">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" type="text/css" href="./css/readme.min.css">
+
+	<script src="./js/lib/jquery.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css"> 
+	<script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sizzle/2.3.5/sizzle.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sizzle/2.3.5/sizzle.min.js"></script> 
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://benahm.github.io/jquery.throwable/javascripts/libs/jquery-1.9.0/jquery.min.js" type="text/javascript"></script> 
+    <script src="http://benahm.github.io/jquery.throwable/javascripts/jquery.throwable.js" type="text/javascript"></script> 
+
+	<script src="./js/platform.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/platform.css">
+</head>
+<body>
+	<div id="content">
+	<h1>The Demo Help</h1>
+	<p>The demo help will teach you how does demo time works?</p>
+	<br>
+	<p>First all, when you have a new router, new IP and got a brand laptop acer from Amazon store, cookies will need to be accepted.</p>
+	<img src="img/stalk/demohelp4.png" alt="They set into disabled input.">
+	<p>The login page nickname and Room ID will be locked. Anyways you can't change your name by using this command <code>/name</code>. It returns back into a default name.</p>
+	<p>How is thing work?</p>
+	<p>This demo system includes an JS inside in the site. First it names him as "guest" then a billions of random numbers use Math.floor &amp; Math.random and does socket.emit.</p>
+	<br>
+	<img src="img/stalk/demohelp1.png" alt="How this website shows you the time of countdown.">
+	<br>
+	<p>If you see this demo timer, it MEANS it's a countdown!</p>
+	<p>When you get this message when the time is zero.</p>
+	<br>
+	<img src="img/stalk/demohelp2.png" width="320" height="200" alt="A kick and expiration message.">
+	<br>
+	<h6>this is will disconnect automatically and kicks you from the server after 3 minutes remaining.</h6>
+	<p>When you click this link for quiz to unlock full version of BonziWORLD FE:</p>
+	<br>
+	<img src="img/stalk/demohelp3.png" width="320" height="200" alt="The tenth question challenge!">
+	<br>
+	<p>This will actually check the question results by a script.</p>
+	<p>When you get the wrong answer, you will not get it!</p>
+	<p>When it is all correct, you will get a link for full version.</p>
+	<p><b>Global Reminder: </b> if you do view source on specified site, we really need some supporting crazy things to do! No cheating! <h6>it has a security issue from the website</h6></p>
+	<br>
+	<a href="index.html">Home</a>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<h1>CHEAT ON DEMO MODE</h1>
+	<p>So its useless for cheating on BonziWORLD FE Demo, first one you need make to press f12 for inspect element. Then go to "Console" and type them:</p>
+	<p><input type="text" placeholder="you are becoming a fucking losky" value="demo = 9999999" title="DONT FUCKING TRY IT THIS SHIT BOOMER" oncopy="alert('STOP CALLING ME A DOGGIS! I AM NOT A DOGGIS!')"></p>
+	<p>when you type Infinity or NaN, you will get unlimited demo time!</p>
+	</div>
+
+	<div id="titlebar">
+		<div id="minimize"></div>
+		<div id="maximize"></div>
+		<div id="close"></div>
+	</div>
+
+	<script>
+		localStorage.demo = Date.now()+"";
+	</script>
+</body>
+</html>

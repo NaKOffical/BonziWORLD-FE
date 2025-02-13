@@ -1,0 +1,308 @@
+@media screen and (max-width: 1150px) {
+	.container {
+		width: 90%;
+	}
+	.mainFooter {
+		.links {
+			width: 75%;
+		}
+		.quote {
+			width: 24%;
+		}
+	}
+}
+
+/* Ipad _______________________________________________________________ */
+
+@media screen and (max-width: 870px) {
+
+	#menu {
+		float: right;
+		font-size: 1.7em;
+		color: #fff;
+		line-height: 2.3em;
+		margin: 0;
+		padding: 0;
+	}
+
+	#nav.js {
+		display: none;
+	}
+
+	.header {
+		max-width: 100%;
+		#nav {
+			float: none;
+			clear: both;
+			width: 100%;
+		}
+		ul {
+			width: 100%;
+			margin: 4em 0 0 0;
+		}
+		li {
+			display: block;
+			border-top: 1px solid #93d3f7;
+			padding: .75em 0;
+			margin: 0;
+		}
+		.button {
+			border: none;
+			border-top: 1px solid #93d3f7;
+			border-radius: 0;
+		}
+	}
+
+	.main {
+		padding-top: 100px;
+		clear: both;
+	}
+
+	.post {
+		width: 100%;
+		float: none;
+		img {
+			-webkit-border-radius: 12.5px;
+			-moz-border-radius: 12.5px;
+			border-radius: 12.5px;
+		}
+	}
+
+	.conversation {
+		font-size: 1.875em;
+		padding-left: .5em;
+	}
+
+	.author {
+		-webkit-border-radius: 12.5px;
+		-moz-border-radius: 12.5px;
+		border-radius: 12.5px;
+	}
+
+	.signup {
+		margin-bottom: 3em;
+		-webkit-border-radius: 12.5px;
+			-moz-border-radius: 12.5px;
+			border-radius: 12.5px;
+		.signupLinks {
+			p {
+				font-size: .9em;
+			}
+		}
+	}
+
+	#sidebar {
+		width: 90%;
+		padding: 2em 5% 0 5%;
+		border-top: 1px solid $grey;
+		.social {
+			font-size: 2em;
+			margin-top: 0;
+		}
+		.column1, .column2 {
+			float: left;
+			width: 50%;
+			margin-bottom: 2em;
+		}
+		.also {
+			display: none;
+		}
+		input[type="search"] {
+			width: 75%;
+		}
+		input[type="submit"] {
+			width: 20%;
+		}
+	}
+
+	.mainFooter {
+		width: 100%;
+		.links {
+			width: 100%;
+			padding: 0;
+			ul {
+				width: 28%;
+				margin-right: 4%;
+			}
+		}
+		li {
+			margin: 0;
+			padding: 0;
+		}
+		.quote {
+			float: left;
+			width: 100%;
+			margin-bottom: 1.5em;
+		}
+	}
+	.top {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 870px) {
+	#menu {
+		display: none;
+	}
+}
+
+/* SMALL RESOLUTIONS ____________________________________________________________________ */
+
+@media screen and (max-width: 600px) {
+.container {
+	width: 90%;
+}
+
+h1 {
+	font-size: 2.25em;
+}
+
+h2, h3, h4 {
+	font-size: 1.6em;
+	margin-top: 1em;
+}
+
+p {
+	margin: 1em 0;
+}
+
+.header {
+	img, object {
+		width: 150px;
+		padding-top: 13px;
+	}
+	li {
+		padding: .4em 0;
+	}
+}
+
+#menu {
+	font-size: 1.3em;
+	line-height: 2.3em;
+}
+
+.main {
+	padding-top: 75px;
+}
+
+.post {
+	h1 {
+		padding-bottom: .2em;
+	}
+	.share {
+		float: left;
+	}
+	img {
+		margin: .5em 0;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		overflow: hidden;
+		vertical-align:bottom;
+	}
+	ul {
+		margin: 1em 0;
+	}
+	li {
+		padding-left: 0;
+	}
+}
+
+.author {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 1em;
+	img {
+		margin-right: 1em;
+	}
+}
+
+.conversation {
+	font-size: 1.5em;
+	padding-left: .5em;
+}
+
+table {
+	th, td {
+		padding: .25em .5em;
+		border: 1px solid $grey;
+	}
+}
+
+.signup {
+	margin-bottom: 2.5em;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 1em;
+	.signupLinks {
+		padding: 0;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	.man, .woman, .fitpro {
+		width: 100%;
+		margin: .5em 0;
+	}
+	img {
+		display: none;
+	}
+}
+
+#sidebar {
+	.also {
+		margin-bottom: 2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	li {
+		font-size: .9em;
+	}
+	.social {
+		font-size: 1.4em;
+	}
+	.column1, .column2 {
+		width: 100%;
+		margin: 0;
+	}
+	.column2 {
+		margin-bottom: 2em;
+	}
+}
+
+.mainFooter {
+	padding: 2em 0 1em 0;
+	p {
+		font-weight: 500;
+	}
+	.links {
+		width: 100%;
+		margin: 0 auto;
+		ul {
+	  margin-right: 0;
+	  width: 100%;
+		}
+	}
+	li {
+		font-weight: 500;
+	}
+	a {
+		font-weight: 500;
+	}
+	.listHighlight {
+		margin: 1.3em 0 .7em 0;
+	}
+	.quote {
+		width: 100%;
+		font-size: 1em;
+		margin-bottom: 0;
+	}
+.copyright {
+	padding-top: 2em;
+	font-size: .7em;
+		}
+	}
+}

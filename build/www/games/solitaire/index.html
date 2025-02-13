@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <title>Playground</title>
+  <meta charset="utf-8" />
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="import" href="game.html">
+  <link rel="import" href="deck.html">
+  <link rel="import" href="card.html">
+  <script src="solitaire.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    navigator.serviceWorker.register('service-worker.js');
+  </script>
+
+  <style>
+    html, body {
+      min-width: 600px;
+      width: 100%;
+      height: 100%
+    }
+    body {
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      background-color: green;
+    }
+    septatrix-deck, septatrix-card {
+      --scale: .3;
+    }
+    septatrix-deck.selected {
+      filter: drop-shadow(0 0 15px red);
+    }
+  </style>
+</head>
+<body>
+  <septatrix-game id="game">
+  </septatrix-game>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OnuteWIKI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta charset="UTF-8">
+<meta name="theme-color" content="black">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<style>
+#wikicentere { text-align: center; border: 1px solid black; background: grey; display:flex; }
+#categories { text-align: center; border: 1px solid black; background: grey; }
+#paged { text-align: center; background: grey; }
+body { background-image: url("img/woodcut.png"); background-repeat: repeat; font-family: "SST Vietnamese Regular", "Arial Black", "Segoe UI", Verdana, Helvetica, Arial, Roboto, Clockopia, sans-serif; }
+</style>
+<body>
+<div id="wikicentere">
+<div id="categories">
+<p><h3>Home</h3></p>
+<p><a href="index.html">Home Page</a></p>
+<p><a href="instructions.html">Instructions</a></p>
+<p><hr></p>
+<details>
+<summary>Basics</summary>
+<p><a href="wiki_login.html">Logining</a></p>
+<p><a href="wiki_chatting.html">Chatting</a></p>
+<p><a href="wiki_followingrules.html">Following the rules</a></p>
+<p><a href="wiki_opz.html">Optimizing for commands</a></p>
+</details>
+<details>
+<summary>On BonziWORLD</summary>
+<p><a href="wiki_bonziworld_bonzi.html">Bonzi</a></p>
+<p><a href="wiki_bonziworld_pope.html">Popes</a></p>
+<p><a href="wiki_bonziworld_god.html">God</a></p>
+<p><a href="wiki_bonziworld_chatbar.html">Chat bar</a></p>
+<p><a href="wiki_bonziworld_errors.html">Error</a></p>
+<p><a href="wiki_bonziworld_bug.html">Bug</a></p>
+<p><a href="wiki_bonziworld_send.html">Send button</a></p>
+<p><a href="wiki_bonziworld_tile.html">Tile button</a></p>
+<p><a href="wiki_bonziworld_ip.html">IP address</a></p>
+<p><a href="wiki_bonziworld_jserror.html">JS Error</a></p>
+</details>
+<details>
+<summary>Warnings</summary>
+<p><a href="wiki_warn_warn.html">Warning</a></p>
+<p><a href="wiki_warn_mute.html">Mute</a></p>
+<p><a href="wiki_warn_kick.html">Kick</a></p>
+<p><a href="wiki_warn_ban.html">Ban</a></p>
+</details>
+<details>
+<summary>Console</summary>
+<p><a href="wiki_co_console.html">Console</a></p>
+<p><a href="wiki_co_consoletip.html">Console tips</a></p>
+</details>
+<details>
+<summary>Specials/Stuff</summary>
+<p><a href="wiki_spec_jquery.html">jQuery</a></p>
+<p><a href="wiki_spec_kiddie.html">Kiddie</a></p>
+<p><a href="wiki_spec_beg.html">Beggar</a></p>
+<p><a href="wiki_spec_gofag.html">Gofag</a></p>
+<p><a href="wiki_spec_force.html">Forcer</a></p>
+<p><a href="wiki_spec_uttp.html">UTTP</a></p>
+<p><a href="wiki_spec_webdestroy.html">Website destroyer</a></p>
+<p><a href="wiki_spec_hater.html">Haters</a></p>
+<p><a href="wiki_spec_beginner.html">Beginners</a></p>
+<p><a href="wiki_spec_troll.html">Trolling</a></p>
+<p><a href="wiki_spec_ddos.html">DDoS</a></p>
+<p><a href="wiki_spec_leak.html">Leaking</a></p>
+<p><a href="wiki_spec_types.html">Types of BonziWORLD</a></p>
+</details>
+<details>
+<summary>Users</summary>
+<p><a href="wiki_user_geri.html">Geri</a></p>
+<p><a href="wiki_user_anon.html">Anonymous</a></p>
+<p><a href="wiki_user_guest.html">Guest</a></p>
+<p><a href="wiki_user_onutesaulute.html">onute</a></p>
+<p><a href="wiki_user_seamus.html">CrazyMediumScout</a></p>
+<p><a href="wiki_user_bagel.html">BagelChip</a></p>
+<p><a href="wiki_user_bot.html">Bot</a></p>
+</details>
+<details>
+<summary>Commands</summary>
+<p><a href="wiki_cmd_name.html">/name</a></p>
+<p><a href="wiki_cmd_speed.html">/speed</a></p>
+<p><a href="wiki_cmd_pitch.html">/pitch</a></p>
+<p><a href="wiki_cmd_joke.html">/joke</a></p>
+<p><a href="wiki_cmd_color.html">/color</a></p>
+<p><a href="wiki_cmd_bp.html">/backflip</a></p>
+<p><a href="wiki_cmd_clap.html">/clap</a></p>
+<p><a href="wiki_cmd_banana.html">/banana</a></p>
+<p><a href="wiki_cmd_teeth.html">/grin</a></p>
+<p><a href="wiki_cmd_yt.html">/youtube</a></p>
+<p><a href="wiki_cmd_vapor.html">/vaporwave</a></p>
+<p><a href="wiki_cmd_acid.html">/acid</a></p>
+<p><a href="wiki_cmd_owo.html">/owo</a></p>
+<p><a href="wiki_cmd_think.html">/think</a></p>
+<p><a href="wiki_cmd_sad.html">/sad</a></p>
+<p><a href="wiki_cmd_earth.html">/earth</a></p>
+<p><a href="wiki_cmd_vid.html">/video</a></p>
+<p><a href="wiki_cmd_sant.html">/sanitize</a></p>
+<p><a href="wiki_cmd_img.html">/img</a></p>
+</details>
+</div>
+<div id="paged">
+<h1>Command: <code>/owo</code></h1>
+<hr>
+<p><code>/owo</code> - Tells if this owo is a. <i>(Added 1.6.0)</i>
+<hr>
+<h2>Trivia</h2>
+<li>You can right-click for Notice bulge.
+</div>
+</div>
+</body>
+</html>

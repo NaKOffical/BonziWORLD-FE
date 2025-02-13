@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FreeCell Project</title>
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#2F3BA2">
+
+  <!-- Your styles -->
+  <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+  <div class="free-cell">
+    <header>
+      <div class="header">
+        <div class="header__title">
+          <img src="./src/assets/images/logo.png">
+        </div>
+      </div>
+    </header>
+    <main class="main-container">
+      <div class="free-cell__top">
+        <div id="freeCell" class="free-cell__cells">
+          <div class="free-cell__cell" data-cell="0" data-dnd="drop" data-type="free"></div>
+          <div class="free-cell__cell" data-cell="1" data-dnd="drop" data-type="free"></div>
+          <div class="free-cell__cell" data-cell="2" data-dnd="drop" data-type="free"></div>
+          <div class="free-cell__cell" data-cell="3" data-dnd="drop" data-type="free"></div>
+        </div>
+        <div id="foundations" class="free-cell__foundations">
+          <div class="free-cell__cell" data-cell="0" data-dnd="drop" data-type="suited"></div>
+          <div class="free-cell__cell" data-cell="1" data-dnd="drop" data-type="suited"></div>
+          <div class="free-cell__cell" data-cell="2" data-dnd="drop" data-type="suited"></div>
+          <div class="free-cell__cell" data-cell="3" data-dnd="drop" data-type="suited"></div>
+        </div>
+      </div>
+      <div id="tableauPiles" class="free-cell__tableau-piles">
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="0"
+          data-cards-length="7"
+          data-dnd="drop"
+          data-type="shuffle">
+          <!-- <img src="images/poker/s01.png">
+          <img src="images/poker/s02.png">
+          <img src="images/poker/s03.png">
+          <img src="images/poker/s04.png">
+          <img src="images/poker/s05.png">
+          <img src="images/poker/h11.png">
+          <img src="images/poker/d08.png">
+          <div id="drag-source">
+            <img src="images/poker/h02.png">
+          </div> -->
+        </div>
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="1"
+          data-cards-length="7"
+          data-dnd="drop"
+          data-type="shuffle">
+        </div>
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="2"
+          data-cards-length="7"
+          data-dnd="drop"
+          data-type="shuffle">
+        </div>
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="3"
+          data-cards-length="7"
+          data-dnd="drop"
+          data-type="shuffle">
+        </div>
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="4"
+          data-cards-length="6"
+          data-dnd="drop"
+          data-type="shuffle">
+        </div>
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="5"
+          data-cards-length="6"
+          data-dnd="drop"
+          data-type="shuffle">
+        </div>
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="6"
+          data-cards-length="6"
+          data-dnd="drop"
+          data-type="shuffle">
+        </div>
+        <div
+          class="free-cell__tableau-pile"
+          data-cell="7"
+          data-cards-length="6"
+          data-dnd="drop"
+          data-type="shuffle">
+        </div>
+      </div>
+      <div id="draggedBox" class="dragged-cards-box"></div>
+      <div class="record time-record">
+        <span id="timeMin" class="time-min">00</span>
+        :
+        <span id="timeSec" class="time-sec">00</span>
+      </div>
+      <div class="record score-record">
+        score 
+        <div id="score" class="scored-number">0</div>
+      </div>
+      <div class="btn-group right">
+        <div class="btn" id="resetBtn">
+          Restart
+        </div>
+        <div class="btn" id="undoBtn">
+          Undo
+        </div>
+        <div class="btn" id="hintBtn">
+          Hint
+        </div>
+      </div>
+      <div class="btn-group left">
+        <div class="btn" id="backBtn">
+          Back
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./src/js/card.js"></script>
+  <script src="./src/js/poker.js"></script>
+  <script src="./src/js/app.js"></script>
+</body>
+</html>

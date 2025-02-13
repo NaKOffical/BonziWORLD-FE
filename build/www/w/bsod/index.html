@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>:(</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="blue">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<style>
+body { background:#1071aa; color: white; font-family:"Segoe UI Light","Roboto Light"; padding-left: 10em;}
+#sad_face { font-size: 8em;}
+#ran { font-size: 1.7em; display:inline-block;}
+#processed { font-size: 1.7em; display:inline-block; }
+#errorinform { font-size: 1.05em; padding-left: 5em;}
+#errorinform2 { font-size: 0.9em; padding-left: 5.85em;}
+#errorre { font-size: 0.9em; padding-left: 5.85em;}
+</style>
+<body>
+<br>
+<br>
+<div id="sad_face">:(</div>
+<div></div><div></div><div></div><hr noshade width="0">
+<div id="ran">Your PC ran into a problem and needs to restart. We're</div>
+<div id="ran">just collecting some error info, and then we'll restart for</div>
+<div></div>
+<div id="ran">you.</div>
+<br>
+<br>
+<div id="processed"></div><div id="ran">% complete</div>
+<br>
+<br>
+<div id="errorinform">For more information about this issue and possible fixes, visit https://www.windows.com/stopcode</div>
+<br>
+<div id="errorinform2">If you call a support person, give them this info.</div>
+<div id="errorre">Stop code: DPC_WATCHDOG_VIOLATION</div>
+</body>
+<script>
+document.getElementById('processed').innerHTML = Math.floor(Math.random()*100);
+</script>
+</html>

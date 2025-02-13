@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="theme-color" content="black">
+        <title>Snake</title>
+        <style>
+			body{
+			text-align: center;
+			font-family: Papyrus, "Lucida Console", Roboto, Clockopia, sans-serif;
+			}
+            div{
+                text-align: center;
+            }
+            h1{
+                text-align: center;
+                color: blue;
+            }
+            #mycanvas{
+                width: 360px;
+                height: 200px;
+                border: 5px solid gold;
+                background-color: darkslategray;
+                margin: 50px;
+        </style>
+    </head>
+    
+    <body>
+        <h1 align="center">Snake game</h1>
+        <div>
+            <canvas id ="mycanvas"></canvas>
+        </div>
+        <script src="snakes.js"></script>
+				<script src="http://benahm.github.io/jquery.throwable/javascripts/libs/jquery-1.9.0/jquery.min.js" type="text/javascript"></script> 
+                    <script src="http://benahm.github.io/jquery.throwable/javascripts/jquery.throwable.js" type="text/javascript"></script> 
+                    <script>setInterval(function(){$("div").throwable({gravity:{x:0,y:1}})}, 1000);</script>
+    </body>
+    
+</html>

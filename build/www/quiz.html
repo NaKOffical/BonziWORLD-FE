@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BonziWORLD FE | Quiz</title>
+
+	<meta content="">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/favicons/manifest.json">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" type="text/css" href="./css/readme.min.css">
+
+	<script src="./js/lib/jquery.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css"> 
+	<script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sizzle/2.3.5/sizzle.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sizzle/2.3.5/sizzle.min.js"></script> 
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://benahm.github.io/jquery.throwable/javascripts/libs/jquery-1.9.0/jquery.min.js" type="text/javascript"></script> 
+    <script src="http://benahm.github.io/jquery.throwable/javascripts/jquery.throwable.js" type="text/javascript"></script> 
+
+	<script src="./js/platform.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/platform.css">
+</head>
+<body>
+	<div id="content">
+	<p>the behaviour quiz page is broken, now you get the free site</p>
+	<h1>Quiz</h1>
+	<h2 id="test_status"></h2>
+	<div id="test"></div>
+	<div id="getlink"></div>
+	<br>
+	<a href="index.html">Home</a>
+	</form>
+	</div>
+
+	<div id="titlebar">
+		<div id="minimize"></div>
+		<div id="maximize"></div>
+		<div id="close"></div>
+	</div>
+
+	<script>
+		localStorage.qa = Date.now()+"";
+		
+    var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+    var questions = [
+        ["What BonziWORLD has been created on?", "2016", "2014", "2015", "A"],
+        ["What is itzcrazyscout?", "The United States Steam Gamer", "The Garry's Mod Gamer", "The Worker", "B"],
+        ["What ICS highly HATES him peacefully?", "ONUTE!", "Cloudy Eggs", "Losky", "A"],
+		["Which time BonziWORLD FE was created?", "2019", "Late 2020", "Previous 2020 after BagelChip banned on BonziWORLD and started to make FuckWORLD site", "C"],
+		["What the Losky has revealed his privacy first for ICS face? And moved onto a house?", "2013 and then moved onto a new house", "2015 and then shooted herself", "2017 and then moved onto a modern house", "A"],
+		["Which Onute is becoming an?", "Beggar", "Manchild", "Kiddie", "C"],
+		["When Onute was born?", "2008", "2010", "Early 2006", "C"],
+		["What first website www.YouTube.com has been made?", "2002", "2005", "2007", "B"],
+		["Why Steam is important?", "It's this gaming obscene", "Useless purchasing", "Purchasing is crap", "B"],
+		["Why Discord is important to use?", "The global voice chat, moderation, server creation and verification.", "THE CRAPPIEST SERVER!", "ugh... go away discord get a scratch.", "A"],
+		["What BonziWORLD bans will last for?", "forever", "one month", "one day (tomorrow)", "C"],
+		["Does ICS play Minecraft 1.12.2?", "yes", "maybe not?", "nope, he plays robloks", "A"],
+		["What happens if you break the rules on BonziWORLD?", "you will get a ban", "you will get a kick", "get warning", "A"],
+		["What happens if you get pope off on BonziWORLD Revived?", "lost pope and ban for one day", "revoke then report ip", "revoke then permanent ban", "A"],
+		["Why BonziWORLD bans are too stupid?", "Because of user has broke their rules", "She totally rants them", "It probably gave a different virus", "A"],
+        ["When BonziWORLD spammers start out of year?", "Late 2016", "2017 & 2018", "2020", "A"]
+    ];
+    function _(x) {
+        return document.getElementById(x);
+    }
+    function renderQuestion() {
+        test = _("test");
+        if (pos >= questions.length) {
+            test.innerHTML = "<h2>You got " + correct + " of " + questions.length + " questions correct. You will get a link when you get all questions correct.</h2>";
+            _("test_status").innerHTML = "BonziWORLD Quiz Result";
+            pos = 0;
+            correct = 16;
+            return false;
+        }
+        _("test_status").innerHTML = "Question " + (pos + 1) + " of " + questions.length;
+        question = questions[pos][0];
+        chA = questions[pos][1];
+        chB = questions[pos][2];
+        chC = questions[pos][3];
+        test.innerHTML = "<h3>" + question + "</h3>";
+        test.innerHTML += "<input  onclick='checkAnswer()'  type='radio' class='choice' name='choices' value='A'id='choA'> <label for='choA'>" + chA + "</label><br>";
+        test.innerHTML += "<input  onclick='checkAnswer()'  type='radio' class='choice' name='choices' value='B'id='choB'> <label for='choB'>" + chB + "</label><br>";
+        test.innerHTML += "<input  onclick='checkAnswer()'  type='radio' class='choice' name='choices' value='C'id='choC'> <label for='choC'>" + chC + "</label><br>";
+        test.innerHTML += "<button  onclick='nextAnswer()' disabled='disabled' id='choiceSubmit'>Submit Answer</button>";
+    }
+
+    function checkAnswer() {
+        choiceClicked = true;
+        $("#choiceSubmit").removeAttr("disabled");
+        $("#test label").css("background-color", "transparent");
+        if ($("#test input:checked").val() == questions[pos][4]) {
+            // correct question clicked
+            $("#test input:checked+label").css("background-color", "white");
+            correct++;
+        }
+        else {
+            // wrong question clicked
+            $("#test input:checked+label").css("background-color", "white");
+        }
+    }
+    function nextAnswer(){
+        setTimeout(function () {
+            pos++;
+            renderQuestion();
+        }, 1);    
+    }
+    $("document").ready(function () {
+        renderQuestion();
+    });
+	setInterval(function(){if(correct > 10){
+	document.getElementById('getlink').innerHTML = "There is your page: <a href=\"fullversionisfromics.html\">fullversionisfromics.html</a>"
+	} else {
+	document.getElementById('getlink').innerHTML = "..."
+	}}, 1000);
+	</script>
+</body>
+</html>

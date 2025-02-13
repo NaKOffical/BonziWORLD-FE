@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BonziWORLD - Website where people are going.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: thistle;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 1px;
+  font-size: 10px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: aqua;
+  display: none;
+  padding: 35px 15px;
+  height: 190%;
+}
+
+#Home {background-color: red;}
+#News {background-color: royalblue;}
+#Contact {background-color: tomato;}
+#About {background-color: forestgreen;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" href="#home">Homepage</button>
+<button class="tablink" onclick="openPage('News', this, 'royalblue')" id="defaultOpen" href="#news">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'tomato')" href="#downloads">Downloads</button>
+<button class="tablink" onclick="openPage('About', this, 'forestgreen')" href="#servers">Servers</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>BonziWORLD - The gorilla speaking chat. Not ever where's a the clicking chat?</p>
+  <h3>Welcome to the BonziWORLD Webpage Help!</h3>
+  <p>This is a debugging website, watch trailers, skits, spams, images and banlists! First one, watch the video of BonziWORLD release:</p>
+<p>If doesn't work, <a href="included/videos/release.mp4">try this</a></p>
+<iframe src="included/videos/release.mp4" width="230" height="400"></iframe>
+<img src="image/night.png" width="150" height="300">
+<img src="image/revive.png" width="150" height="300">
+<p>Check announces and what's happening in server!</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Announcements, when this update is released:</p>
+  <ul style="list-style:none;">
+  <li>V1 - First release.</li>
+  <li>V2 - Setting and orange color added.</li>
+  <li>V3 - More colors added, more configurations, more HTML. Games and downloads are added.</li>
+  <li>V4 - <b>Coming soon...</b> Server ports added.</li>
+  </ul>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Download</h3>
+  <p>Download, where they all files here.</p>
+  <p><a href="http://78.63.40.199:3000/swfplayer/swf/sm63ld.swf">Download .swf file - Super Mario 63 Level designer</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/afpp10.exe">Download Adobe Flash Player 10 (Recommended for Windows XP computers)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/afpp11.exe">Download Adobe Flash Player 11 (8x8 and 16x16 are added)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/afpp27.exe">Download Adobe Flash Player 27 (Audio output option)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/afpp32.exe">Download Adobe Flash Player 32 (Usable for Windows 10, still works in Windows XP)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/FlashPla3.exe">Download Flash Player 3 (Windows 95 and 98)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/FlashPla4.exe">Download Flash Player 4 (Updated, Windows 98, 2000, ME)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/FlashPla5.exe">Download Flash Player 5 (Best for education, email, help and support, games, etc. Windows 2000, ME, XP, Whistler)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/macrof7.exe">Download Macromedia Flash Player 7 (Supports games, Windows 98, 2000, ME, XP, Longhorn, Vista and 7)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/macrof8.exe">Download Macromedia Flash Player 8 (Best player made, Windows XP or higher)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/macrof9.exe">Download Macromedia Flash Player 9 Debugger (Supports debugger and rectangle red regions, Windows XP or higher)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/macrof6.exe">Download Macromedia Flash Player 6 (Games scripting, Windows ME, Whistler, XP, Longhorn, Vista and more versions)</a></p>
+  <p><a href="http://78.63.40.199:3000/download/files/macromediapack.7z">Download All Macromedia Flash Player versions (Needs 7zip)</a></p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>Node servers</h3>
+  <p>Website nodes, when they are online.</p>
+  <p><a href="http://78.63.40.199:3000">Revived Server</a></p>
+  <p><a href="http://78.63.40.199:3001">Night mode, keep your eyes darker!</a></p>
+  <p><a href="#">Small mode, disables unused commands, faster server. (DELETED)</a></p>
+  <p><a href="http://78.63.40.199:3030">JScreenFix - Fix dead pixels in 10 minutes! (NOT WORKING AT ALL)</a></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

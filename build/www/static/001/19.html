@@ -1,0 +1,24 @@
+<script>
+function EyeVommit() {
+    document.getElementById("actbtn").style.display = 'none';
+    'use strict';
+    var colors = ['red', 'blue', 'green', 'purple', 'orange', 'magenta', 'chartreuse', 'cyan', 'yellow'],
+        target = document.getElementById('rtext').children,
+        i,
+        len = colors.length,
+        inter = setInterval(function() {
+            colors.unshift(colors.pop());
+            for (i = 0; i < len; i++) {
+                target[i].style.color = colors[i];
+            }
+        }, 200);
+}
+</script>
+<div id="table1">
+<p id="rtext"> <span id="s1">H</span><span id="s2">e</span><span id="s3">l</span><span  id="s4">l</span><span id="s5">o</span><span id="s6">!</span>
+
+    <br />
+    <div id="actbtn">
+        <button onclick="EyeVommit()">Pabam!</button>
+    </div>
+</p>

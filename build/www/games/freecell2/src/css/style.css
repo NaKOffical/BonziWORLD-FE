@@ -1,0 +1,204 @@
+html {
+  box-sizing: border-box;
+  font-family: 'El Messiri', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #3eaf9c;
+  font-size: 18px;
+  font-weight: 100;
+  margin: 0;
+  color: white;
+}
+
+.free-cell {
+  border: 30px solid #11463d;
+  height: 100vh;
+  /* position: relative; */
+}
+
+.header {
+  padding: 20px;
+}
+
+.header__title {
+  justify-content: center;
+  display: flex;
+  margin-top: -40px;
+  transition: all ease-in-out .8s;
+}
+
+.header__title:hover {
+  transform: rotate(10deg);
+}
+
+.header__title > img {
+  width: 150px;
+  height: 150px;
+  box-shadow: none;
+}
+
+.free-cell__top {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.free-cell__cells {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 100px;
+}
+
+.free-cell__foundations {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.free-cell__cell {
+  position: relative;
+  width: 82px;
+  height: 113px;
+  border: 4px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  margin: 6px;
+}
+
+.free-cell__tableau-piles {
+  position: relative;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.free-cell__tableau-pile {
+  /* margin: 8px; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+/* .free-cell__cell > img  */
+.card > img {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.card {
+  position: absolute;
+  width: auto;
+  height: auto;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .3s linear;
+  border-radius: 4px;
+}
+
+img {
+  width: 75px;
+  height: 105px;
+  /* margin-bottom: -90px; */
+  /* cursor: pointer; */
+  box-shadow: 2px 2px 14px #11463d31;
+}
+
+.dragged-cards-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  z-index: -1;
+}
+
+.is-dropped {
+  transition: all .3s linear;
+}
+
+.hightlight {
+  border: 4px solid lightblue;
+}
+
+.record {
+  position: absolute;
+  top: 20px;
+  width: 150px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  line-height: 60px;
+  text-align: center;
+  background-image: url('../assets/images/timer-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #11463d;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.time-record {
+  left: 20px;
+}
+
+.score-record {
+  right: 20px;
+}
+
+#score {
+  margin-left: 8px;
+}
+
+.btn {
+  display: inline-block;
+  background: #11463d;
+  padding: 4px 20px;
+  border-radius: 2px;
+  font-size: 15px;
+  margin-right: 6px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  border: 2px solid #268d7c;
+}
+
+.btn:hover {
+  background: #237466;
+  transform: translateY(8px);
+}
+
+.btn-group {
+  position: absolute;
+  bottom: 20px;
+}
+.btn-group.right {
+  right: 20px;
+  display: flex;
+}
+
+.btn-group.left {
+  left: 20px;
+}
+
+/* #drag-source {
+  width: 75px;
+  height: 105px;
+  margin-top: -3px;
+} */
+
+[draggable="true"] {
+  /*
+   To prevent user selecting inside the drag source
+  */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
